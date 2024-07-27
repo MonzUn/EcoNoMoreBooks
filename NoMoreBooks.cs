@@ -14,6 +14,37 @@ namespace Eco.Mods.TechTree
     {
         // How many scrolls should be created per craft
         public const int OutputAmount = 1;
+
+        // Percentage modifiers for recipe ingredient costs
+        public static readonly Dictionary<Type, float> IngredientModifiers = new Dictionary<Type, float>
+        {
+            { typeof(CarpentrySkillBookRecipe),             1.0f },
+            { typeof(MasonrySkillBookRecipe),               1.0f },
+            { typeof(FarmingSkillBookRecipe),               1.0f },
+            { typeof(ButcherySkillBookRecipe),              1.0f },
+            { typeof(TailoringSkillBookRecipe),             1.0f },
+            { typeof(BasicEngineeringSkillBookRecipe),      1.0f },
+            { typeof(PaperMillingSkillBookRecipe),          1.0f },
+            { typeof(ShipwrightSkillBookRecipe),            1.0f },
+            { typeof(SmeltingSkillBookRecipe),              1.0f },
+            { typeof(MillingSkillBookRecipe),               1.0f },
+            { typeof(FertilizersSkillBookRecipe),           1.0f },
+            { typeof(CookingSkillBookRecipe),               1.0f },
+            { typeof(BakingSkillBookRecipe),                1.0f },
+            { typeof(BlacksmithSkillBookRecipe),            1.0f },
+            { typeof(PotterySkillBookRecipe),               1.0f },
+            { typeof(MechanicsSkillBookRecipe),             1.0f },
+            { typeof(GlassworkingSkillBookRecipe),          1.0f },
+            { typeof(AdvancedSmeltingSkillBookRecipe),      1.0f },
+            { typeof(AdvancedCookingSkillBookRecipe),       1.0f },
+            { typeof(AdvancedBakingSkillBookRecipe),        1.0f },
+            { typeof(AdvancedMasonrySkillBookRecipe),       1.0f },
+            { typeof(OilDrillingSkillBookRecipe),           1.0f },
+            { typeof(ElectronicsSkillBookRecipe),           1.0f },
+            { typeof(CompositesSkillBookRecipe),            1.0f },
+            { typeof(IndustrySkillBookRecipe),              1.0f },
+            { typeof(CuttingEdgeCookingSkillBookRecipe),    1.0f },
+        };
     }
 
     public partial class AdvancedBakingSkillBookRecipe
@@ -22,6 +53,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<AdvancedBakingSkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -37,6 +77,15 @@ namespace Eco.Mods.TechTree
 
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<AdvancedCookingSkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -51,6 +100,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<AdvancedMasonrySkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -65,6 +123,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<AdvancedSmeltingSkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -79,6 +146,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<BakingSkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -93,6 +169,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<BasicEngineeringSkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -107,6 +192,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<ButcherySkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -121,6 +215,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<CarpentrySkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -135,6 +238,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<CompositesSkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -149,6 +261,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<CookingSkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -163,6 +284,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<CuttingEdgeCookingSkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -177,6 +307,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<ElectronicsSkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -191,6 +330,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<FarmingSkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -205,6 +353,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<FertilizersSkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -219,6 +376,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<GlassworkingSkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -233,6 +399,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<IndustrySkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -247,6 +422,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<MasonrySkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -261,6 +445,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<MechanicsSkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -275,6 +468,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<MillingSkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -289,6 +491,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<OilDrillingSkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -303,6 +514,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<PaperMillingSkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -317,6 +537,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<PotterySkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -331,6 +560,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<SmeltingSkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -345,6 +583,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<TailoringSkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -358,6 +605,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<ShipwrightSkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
@@ -371,6 +627,15 @@ namespace Eco.Mods.TechTree
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<BlacksmithSkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
         }
 
         partial void ModsPostInitialize()
