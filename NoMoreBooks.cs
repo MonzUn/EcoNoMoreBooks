@@ -1,4 +1,6 @@
-﻿using Eco.Gameplay.Items;
+﻿using Eco.Core.Items;
+using Eco.Gameplay.Items;
+using Eco.Gameplay.Items.Recipes;
 using Eco.Shared.Localization;
 using Eco.Shared.Utils;
 using System;
@@ -18,8 +20,8 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPreInitialize()
         {
-            Recipes[0].Items.Clear();
-            Recipes[0].Items.Add(new CraftingElement<AdvancedBakingSkillScroll>(NMBSettings.OutputAmount));
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<AdvancedBakingSkillScroll>(NMBSettings.OutputAmount));
         }
 
         partial void ModsPostInitialize()
@@ -33,8 +35,8 @@ namespace Eco.Mods.TechTree
         partial void ModsPreInitialize()
         {
 
-            Recipes[0].Items.Clear();
-            Recipes[0].Items.Add(new CraftingElement<AdvancedCookingSkillScroll>(NMBSettings.OutputAmount));
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<AdvancedCookingSkillScroll>(NMBSettings.OutputAmount));
         }
 
         partial void ModsPostInitialize()
@@ -47,8 +49,8 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPreInitialize()
         {
-            Recipes[0].Items.Clear();
-            Recipes[0].Items.Add(new CraftingElement<AdvancedMasonrySkillScroll>(NMBSettings.OutputAmount));
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<AdvancedMasonrySkillScroll>(NMBSettings.OutputAmount));
         }
 
         partial void ModsPostInitialize()
@@ -61,8 +63,8 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPreInitialize()
         {
-            Recipes[0].Items.Clear();
-            Recipes[0].Items.Add(new CraftingElement<AdvancedSmeltingSkillScroll>(NMBSettings.OutputAmount));
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<AdvancedSmeltingSkillScroll>(NMBSettings.OutputAmount));
         }
 
         partial void ModsPostInitialize()
@@ -75,8 +77,8 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPreInitialize()
         {
-            Recipes[0].Items.Clear();
-            Recipes[0].Items.Add(new CraftingElement<BakingSkillScroll>(NMBSettings.OutputAmount));
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<BakingSkillScroll>(NMBSettings.OutputAmount));
         }
 
         partial void ModsPostInitialize()
@@ -89,8 +91,8 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPreInitialize()
         {
-            Recipes[0].Items.Clear();
-            Recipes[0].Items.Add(new CraftingElement<BasicEngineeringSkillScroll>(NMBSettings.OutputAmount));
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<BasicEngineeringSkillScroll>(NMBSettings.OutputAmount));
         }
 
         partial void ModsPostInitialize()
@@ -103,8 +105,8 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPreInitialize()
         {
-            Recipes[0].Items.Clear();
-            Recipes[0].Items.Add(new CraftingElement<ButcherySkillScroll>(NMBSettings.OutputAmount));
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<ButcherySkillScroll>(NMBSettings.OutputAmount));
         }
 
         partial void ModsPostInitialize()
@@ -117,8 +119,8 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPreInitialize()
         {
-            Recipes[0].Items.Clear();
-            Recipes[0].Items.Add(new CraftingElement<CarpentrySkillScroll>(NMBSettings.OutputAmount));
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<CarpentrySkillScroll>(NMBSettings.OutputAmount));
         }
 
         partial void ModsPostInitialize()
@@ -131,8 +133,8 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPreInitialize()
         {
-            Recipes[0].Items.Clear();
-            Recipes[0].Items.Add(new CraftingElement<CompositesSkillScroll>(NMBSettings.OutputAmount));
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<CompositesSkillScroll>(NMBSettings.OutputAmount));
         }
 
         partial void ModsPostInitialize()
@@ -145,8 +147,8 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPreInitialize()
         {
-            Recipes[0].Items.Clear();
-            Recipes[0].Items.Add(new CraftingElement<CookingSkillScroll>(NMBSettings.OutputAmount));
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<CookingSkillScroll>(NMBSettings.OutputAmount));
         }
 
         partial void ModsPostInitialize()
@@ -159,8 +161,8 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPreInitialize()
         {
-            Recipes[0].Items.Clear();
-            Recipes[0].Items.Add(new CraftingElement<CuttingEdgeCookingSkillScroll>(NMBSettings.OutputAmount));
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<CuttingEdgeCookingSkillScroll>(NMBSettings.OutputAmount));
         }
 
         partial void ModsPostInitialize()
@@ -173,8 +175,8 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPreInitialize()
         {
-            Recipes[0].Items.Clear();
-            Recipes[0].Items.Add(new CraftingElement<ElectronicsSkillScroll>(NMBSettings.OutputAmount));
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<ElectronicsSkillScroll>(NMBSettings.OutputAmount));
         }
 
         partial void ModsPostInitialize()
@@ -187,8 +189,8 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPreInitialize()
         {
-            Recipes[0].Items.Clear();
-            Recipes[0].Items.Add(new CraftingElement<FarmingSkillScroll>(NMBSettings.OutputAmount));
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<FarmingSkillScroll>(NMBSettings.OutputAmount));
         }
 
         partial void ModsPostInitialize()
@@ -201,8 +203,8 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPreInitialize()
         {
-            Recipes[0].Items.Clear();
-            Recipes[0].Items.Add(new CraftingElement<FertilizersSkillScroll>(NMBSettings.OutputAmount));
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<FertilizersSkillScroll>(NMBSettings.OutputAmount));
         }
 
         partial void ModsPostInitialize()
@@ -215,8 +217,8 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPreInitialize()
         {
-            Recipes[0].Items.Clear();
-            Recipes[0].Items.Add(new CraftingElement<GlassworkingSkillScroll>(NMBSettings.OutputAmount));
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<GlassworkingSkillScroll>(NMBSettings.OutputAmount));
         }
 
         partial void ModsPostInitialize()
@@ -229,8 +231,8 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPreInitialize()
         {
-            Recipes[0].Items.Clear();
-            Recipes[0].Items.Add(new CraftingElement<IndustrySkillScroll>(NMBSettings.OutputAmount));
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<IndustrySkillScroll>(NMBSettings.OutputAmount));
         }
 
         partial void ModsPostInitialize()
@@ -243,8 +245,8 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPreInitialize()
         {
-            Recipes[0].Items.Clear();
-            Recipes[0].Items.Add(new CraftingElement<MasonrySkillScroll>(NMBSettings.OutputAmount));
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<MasonrySkillScroll>(NMBSettings.OutputAmount));
         }
 
         partial void ModsPostInitialize()
@@ -257,8 +259,8 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPreInitialize()
         {
-            Recipes[0].Items.Clear();
-            Recipes[0].Items.Add(new CraftingElement<MechanicsSkillScroll>(NMBSettings.OutputAmount));
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<MechanicsSkillScroll>(NMBSettings.OutputAmount));
         }
 
         partial void ModsPostInitialize()
@@ -271,8 +273,8 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPreInitialize()
         {
-            Recipes[0].Items.Clear();
-            Recipes[0].Items.Add(new CraftingElement<MillingSkillScroll>(NMBSettings.OutputAmount));
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<MillingSkillScroll>(NMBSettings.OutputAmount));
         }
 
         partial void ModsPostInitialize()
@@ -285,8 +287,8 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPreInitialize()
         {
-            Recipes[0].Items.Clear();
-            Recipes[0].Items.Add(new CraftingElement<OilDrillingSkillScroll>(NMBSettings.OutputAmount));
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<OilDrillingSkillScroll>(NMBSettings.OutputAmount));
         }
 
         partial void ModsPostInitialize()
@@ -299,8 +301,8 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPreInitialize()
         {
-            Recipes[0].Items.Clear();
-            Recipes[0].Items.Add(new CraftingElement<PaperMillingSkillScroll>(NMBSettings.OutputAmount));
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<PaperMillingSkillScroll>(NMBSettings.OutputAmount));
         }
 
         partial void ModsPostInitialize()
@@ -313,8 +315,8 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPreInitialize()
         {
-            Recipes[0].Items.Clear();
-            Recipes[0].Items.Add(new CraftingElement<PotterySkillScroll>(NMBSettings.OutputAmount));
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<PotterySkillScroll>(NMBSettings.OutputAmount));
         }
 
         partial void ModsPostInitialize()
@@ -327,8 +329,8 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPreInitialize()
         {
-            Recipes[0].Items.Clear();
-            Recipes[0].Items.Add(new CraftingElement<SmeltingSkillScroll>(NMBSettings.OutputAmount));
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<SmeltingSkillScroll>(NMBSettings.OutputAmount));
         }
 
         partial void ModsPostInitialize()
@@ -341,8 +343,21 @@ namespace Eco.Mods.TechTree
     {
         partial void ModsPreInitialize()
         {
-            Recipes[0].Items.Clear();
-            Recipes[0].Items.Add(new CraftingElement<TailoringSkillScroll>(NMBSettings.OutputAmount));
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<TailoringSkillScroll>(NMBSettings.OutputAmount));
+        }
+
+        partial void ModsPostInitialize()
+        {
+            RecipeName = $"{Recipes[0].Name.AddSpacesBetweenCapitals()} Skill Scroll";
+        }
+    }
+    public partial class ShipwrightSkillBookRecipe
+    {
+        partial void ModsPreInitialize()
+        {
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<ShipwrightSkillScroll>(NMBSettings.OutputAmount));
         }
 
         partial void ModsPostInitialize()
