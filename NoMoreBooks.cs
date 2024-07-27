@@ -365,4 +365,17 @@ namespace Eco.Mods.TechTree
             RecipeName = $"{Recipes[0].Name.AddSpacesBetweenCapitals()} Skill Scroll";
         }
     }
+    public partial class BlacksmithSkillBookRecipe
+    {
+        partial void ModsPreInitialize()
+        {
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<BlacksmithSkillScroll>(NMBSettings.OutputAmount));
+        }
+
+        partial void ModsPostInitialize()
+        {
+            RecipeName = $"{Recipes[0].Name.AddSpacesBetweenCapitals()} Skill Scroll";
+        }
+    }
 }
