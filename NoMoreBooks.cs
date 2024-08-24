@@ -32,6 +32,7 @@ namespace Eco.Mods.TechTree
             { typeof(CookingSkillBookRecipe),               1.0f },
             { typeof(BakingSkillBookRecipe),                1.0f },
             { typeof(BlacksmithSkillBookRecipe),            1.0f },
+            { typeof(PaintingSkillBookRecipe),              1.0f },
             { typeof(PotterySkillBookRecipe),               1.0f },
             { typeof(MechanicsSkillBookRecipe),             1.0f },
             { typeof(GlassworkingSkillBookRecipe),          1.0f },
@@ -599,6 +600,7 @@ namespace Eco.Mods.TechTree
             RecipeName = $"{Recipes[0].Name.AddSpacesBetweenCapitals()} Skill Scroll";
         }
     }
+
     public partial class ShipwrightSkillBookRecipe
     {
         partial void ModsPreInitialize()
@@ -621,12 +623,36 @@ namespace Eco.Mods.TechTree
             RecipeName = $"{Recipes[0].Name.AddSpacesBetweenCapitals()} Skill Scroll";
         }
     }
+
     public partial class BlacksmithSkillBookRecipe
     {
         partial void ModsPreInitialize()
         {
             Recipes[0].Products.Clear();
             Recipes[0].Products.Add(new CraftingElement<BlacksmithSkillScroll>(NMBSettings.OutputAmount));
+
+            Recipe recipe = Recipes[0];
+            for (int i = 0; i < recipe.Ingredients.Count(); ++i)
+            {
+                IngredientElement ingredient = recipe.Ingredients[i];
+                recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
+                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
+            }
+        }
+
+        partial void ModsPostInitialize()
+        {
+            RecipeName = $"{Recipes[0].Name.AddSpacesBetweenCapitals()} Skill Scroll";
+        }
+    }
+
+    public partial class PaintingSkillBookRecipe
+    {
+        partial void ModsPreInitialize()
+        {
+            Recipes[0].Products.Clear();
+            Recipes[0].Products.Add(new CraftingElement<PaintingSkillScroll>(NMBSettings.OutputAmount));
 
             Recipe recipe = Recipes[0];
             for (int i = 0; i < recipe.Ingredients.Count(); ++i)
