@@ -1,4 +1,5 @@
 ﻿using Eco.Core.Items;
+using Eco.Core.Plugins.Interfaces;
 using Eco.Gameplay.Items;
 using Eco.Gameplay.Items.Recipes;
 using Eco.Shared.Localization;
@@ -7,6 +8,16 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
+
+public class NoMoreBooksMod : IModInit
+{
+    public static ModRegistration Register() => new()
+    {
+        ModName = "NoMoreBooks",
+        ModDescription = "Changes all book recipes to instead create a configurable amount of scrolls and also allows configuration of the crafting costs for skill scrolls.",
+        ModDisplayName = "No More Books",
+    };
+}
 
 namespace Eco.Mods.TechTree
 {
