@@ -71,7 +71,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -95,7 +95,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -118,7 +118,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -141,7 +141,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -164,7 +164,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -187,7 +187,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -210,7 +210,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -233,7 +233,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -256,7 +256,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -279,7 +279,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -302,7 +302,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -325,7 +325,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -348,7 +348,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -371,7 +371,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -394,7 +394,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -417,7 +417,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -440,7 +440,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -463,7 +463,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -486,7 +486,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -509,7 +509,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -532,7 +532,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -555,7 +555,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -578,7 +578,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -601,7 +601,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -624,7 +624,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -647,7 +647,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
@@ -670,7 +670,7 @@ namespace Eco.Mods.TechTree
             {
                 IngredientElement ingredient = recipe.Ingredients[i];
                 recipe.Ingredients[i] = recipe.Ingredients[i].IsSpecificItem
-                    ? new IngredientElement(ingredient.StackObject.GetType(), ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
+                    ? new IngredientElement(ingredient.ItemRepresentation, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true)
                     : new IngredientElement(ingredient.InnerName, ingredient.Quantity.GetBaseValue * NMBSettings.IngredientModifiers[this.GetType()], true);
             }
         }
